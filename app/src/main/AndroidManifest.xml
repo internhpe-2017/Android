@@ -23,7 +23,8 @@
         <activity android:name=".Register" />
         <activity android:name=".Forgot" />
         <activity android:name=".Verify" />
-        <activity android:name=".Reset"></activity>
+        <activity android:name=".Reset" />
+        <activity android:name=".DetailedReport"></activity>
     </application>
 
 </manifest>
