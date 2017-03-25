@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.girivi.vlogin.Home_Page"
+        android:id="@+id/activity_main">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="Welcome To Expense Planner"
+            android:layout_marginTop="15dp" />
+
+        <Button
+            android:text="Expenses"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#37474F"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:onClick="expenses"
+            android:fontFamily="sans-serif" />
+
+        <Button
+            android:text="Settlement"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#37474F"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:onClick="settlement"
+            android:fontFamily="sans-serif" />
+
+        <Button
+            android:text="Report"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#37474F"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:onClick="report"
+            android:fontFamily="sans-serif" />
+
+        <Button
+            android:text="Summary"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#37474F"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            android:onClick="summary"
+            android:fontFamily="sans-serif" />
+
+        <Button
+            android:text="Occasion Report"
+            android:layout_marginTop="20dp"
+            android:layout_width="250dp"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#37474F"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5"
+            android:onClick="ocrep"
+            android:fontFamily="sans-serif" />
+
+    </LinearLayout>
