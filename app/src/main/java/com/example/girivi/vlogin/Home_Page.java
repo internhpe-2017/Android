@@ -22,11 +22,11 @@ public class Home_Page extends AppCompatActivity {
         startActivity(i);
     }
     public void report(View view) {
-        Intent i = new Intent(this,report.class);
+        Intent i = new Intent(this,DetailedReport.class);
         startActivity(i);
     }
     public void summary(View view) {
-        Intent i = new Intent(this,summary.class);
+        Intent i = new Intent(this,Summary.class);
         startActivity(i);
     }
     public void ocrep(View view) {

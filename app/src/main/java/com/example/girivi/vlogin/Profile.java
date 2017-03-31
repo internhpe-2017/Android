@@ -33,4 +33,25 @@ public class Profile extends AppCompatActivity {
         moveTaskToBack(true);
     }
 
+    public void expenses(View view) {
+        Intent i = new Intent(Profile.this,expense.class);
+        startActivity(i);
+    }
+    public void settlement(View view) {
+        Intent i = new Intent(Profile.this,settlement.class);
+        startActivity(i);
+    }
+    public void report(View view) {
+        Intent i = new Intent(Profile.this,DetailedReport.class);
+        startActivity(i);
+    }
+    public void summary(View view) {
+        Intent i = new Intent(Profile.this,Summary.class);
+        startActivity(i);
+    }
+    public void ocrep(View view) {
+        Intent i = new Intent(Profile.this,ocrep.class);
+        startActivity(i);
+    }
+
 }
