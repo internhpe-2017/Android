@@ -25,11 +25,11 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 public class Expense extends AppCompatActivity implements View.OnClickListener {
-    public static final String KEY_USERNAME = "Username";
-    public static final String KEY_PARTICULAR = "Particular";
-    public static final String KEY_DATE = "Date";
-    public static final String KEY_OCCASION = "Occasion";
-    public static final String KEY_AMOUNT = "Amount";
+    public static  String KEY_USERNAME = "Username";
+    public static  String KEY_PARTICULAR = "Particular";
+    public static  String KEY_DATE = "Date";
+    public static  String KEY_OCCASION = "Occasion";
+    public static  String KEY_AMOUNT = "Amount";
 
     private EditText username;
     private EditText particular;

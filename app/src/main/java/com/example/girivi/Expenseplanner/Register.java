@@ -24,12 +24,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Register extends AppCompatActivity implements View.OnClickListener {
-    public static final String KEY_USERNAME = "name";
-        public static final String KEY_PASSWORD = "pass";
-	    public static final String KEY_Familyname = "fname";
-	    public static final String KEY_Email = "email";
-	    public static final String KEY_Gender = "gen";
-		public static final String KEY_DOB = "dob";
+        public static  String KEY_USERNAME = "name";
+        public static  String KEY_PASSWORD = "pass";
+	    public static  String KEY_Familyname = "fname";
+	    public static  String KEY_Email = "email";
+	    public static  String KEY_Gender = "gen";
+		public static  String KEY_DOB = "dob";
 
 		private EditText editTextName;
 		private EditText editTextDob;

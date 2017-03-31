@@ -37,11 +37,11 @@ public class Profile extends AppCompatActivity {
         startActivity(i);
     }
     public void settlement(View view) {
-        Intent i = new Intent(Profile.this,settlement.class);
+        Intent i = new Intent(Profile.this,Settlement.class);
         startActivity(i);
     }
     public void report(View view) {
-        Intent i = new Intent(Profile.this,DetailedReport.class);
+        Intent i = new Intent(this,DetailedReport.class);
         startActivity(i);
     }
     public void summary(View view) {
@@ -49,7 +49,7 @@ public class Profile extends AppCompatActivity {
         startActivity(i);
     }
     public void ocrep(View view) {
-        Intent i = new Intent(Profile.this,ocrep.class);
+        Intent i = new Intent(Profile.this,Ocrep.class);
         startActivity(i);
     }
 

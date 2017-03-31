@@ -11,7 +11,7 @@
         android:paddingRight="16dp"
         android:paddingTop="16dp"
         android:weightSum="1"
-        tools:context="com.example.girivi.Expenseplanner.settlement">
+        tools:context="com.example.girivi.Expenseplanner.Settlement">
 
         <EditText
             android:id="@+id/name"

@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Reset extends AppCompatActivity implements View.OnClickListener {
-    public static final String KEY_EMAIL="email";
-    public static final String KEY_PASS="pass";
+    public static  String KEY_EMAIL="email";
+    public static  String KEY_PASS="pass";
     private EditText enter;
     private EditText confirm;
     private Button submit;

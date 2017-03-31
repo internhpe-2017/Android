@@ -20,11 +20,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-public class settlement extends AppCompatActivity implements View.OnClickListener {
-    public static final String KEY_NAME = "Username";
-    public static final String KEY_AMOUNT = "Amount";
-    public static final String KEY_OCCASION = "Occasion";
-    public static final String KEY_OWE = "Owe";
+public class Settlement extends AppCompatActivity implements View.OnClickListener {
+    public static  String KEY_NAME = "Username";
+    public static String KEY_AMOUNT = "Amount";
+    public static  String KEY_OCCASION = "Occasion";
+    public static  String KEY_OWE = "Owe";
 
     private EditText name;
     private EditText amount;
@@ -72,16 +72,16 @@ public class settlement extends AppCompatActivity implements View.OnClickListene
                     @Override
                     public void onResponse(String response) {
                         if (response.equals("please fill all values")) {
-                            Toast.makeText(settlement.this,"Please Enter all fields", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Settlement.this,"Please Enter all fields", Toast.LENGTH_LONG).show();
                         } else {
-                            Toast.makeText(settlement.this,"Successfully Added !!!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Settlement.this,"Successfully Added !!!", Toast.LENGTH_LONG).show();
                         }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(settlement.this, error.toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(Settlement.this, error.toString(), Toast.LENGTH_LONG).show();
                     }
                 }) {
             @Override

@@ -18,7 +18,7 @@ public class Home_Page extends AppCompatActivity {
         startActivity(i);
     }
     public void settlement(View view) {
-        Intent i = new Intent(this,settlement.class);
+        Intent i = new Intent(this,Settlement.class);
         startActivity(i);
     }
     public void report(View view) {
@@ -30,7 +30,7 @@ public class Home_Page extends AppCompatActivity {
         startActivity(i);
     }
     public void ocrep(View view) {
-        Intent i = new Intent(this,ocrep.class);
+        Intent i = new Intent(this,Ocrep.class);
         startActivity(i);
     }
 }
