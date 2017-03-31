@@ -11,7 +11,7 @@
         android:paddingTop="16dp"
         android:id="@+id/activity_expense"
         android:weightSum="1"
-        tools:context="com.example.girivi.Expenseplanner.Expense">
+        tools:context="com.example.Expense.Planner.Expense">
 
         <EditText
             android:layout_width="match_parent"

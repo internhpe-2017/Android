@@ -1,10 +1,11 @@
-package com.example.girivi.Expenseplanner;
+package com.example.Expense.Planner;
 
 /**
  * Created by girivi on 3/31/2017.
  */
 
-public interface AppConfig {
+public interface AppConfig  {
+
     public static final String LOGIN_URL = "http://triphpe.16mb.com/nlog.php";
     public static final String REGISTER_URL = "http://triphpe.16mb.com/vreg.php";
     public static final String Forgot_URL = "http://triphpe.16mb.com/forgotpass.php";

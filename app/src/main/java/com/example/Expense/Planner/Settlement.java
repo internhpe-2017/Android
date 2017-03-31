@@ -1,4 +1,4 @@
-package com.example.girivi.Expenseplanner;
+package com.example.Expense.Planner;
 
 
 import android.support.v7.app.AppCompatActivity;
@@ -71,7 +71,7 @@ public class Settlement extends AppCompatActivity implements View.OnClickListene
                 new Response.Listener<String>(){
                     @Override
                     public void onResponse(String response) {
-                        if (response.equals("please fill all values")) {
+                        if (response.equals(obj.Valid)) {
                             Toast.makeText(Settlement.this,"Please Enter all fields", Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(Settlement.this,"Successfully Added !!!", Toast.LENGTH_LONG).show();
@@ -97,4 +97,5 @@ public class Settlement extends AppCompatActivity implements View.OnClickListene
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
+    Resources obj=new Resources();
 }

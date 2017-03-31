@@ -1,4 +1,4 @@
-package com.example.girivi.Expenseplanner;
+package com.example.Expense.Planner;
 
 import org.junit.Test;
 

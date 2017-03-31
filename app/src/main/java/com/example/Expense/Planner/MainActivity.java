@@ -1,4 +1,4 @@
-package com.example.girivi.Expenseplanner;
+package com.example.Expense.Planner;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,8 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
    // public static final String LOGIN_URL = "http://192.168.43.40:1080/source/include/dblogin.php";
 
-    public static final String KEY_USERNAME="user";
-    public static final String KEY_PASSWORD="pass";
+    public static  String KEY_USERNAME="user";
+    public static  String KEY_PASSWORD="pass";
+
 
     private EditText editTextUsername;
     private EditText editTextPassword;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String user;
     private String pass;
-
+    Resources obj=new Resources();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,14 +68,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         user = editTextUsername.getText().toString().trim();
         pass = editTextPassword.getText().toString().trim();
 
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConfig.LOGIN_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        if(response.equals("Sorry, Invalid Credentials")){
+                        if(response.equals(obj.credentials)){
                             Toast.makeText(MainActivity.this,"Sorry, Invalid Credentials",Toast.LENGTH_LONG).show();
 
-                        }else if (response.equals("please fill all values")){
+                        }else if (response.equals(obj.Valid)){
                             Toast.makeText(MainActivity.this,"Please Enter all fields",Toast.LENGTH_LONG).show();
                         }
 

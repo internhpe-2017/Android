@@ -1,4 +1,4 @@
-package com.example.girivi.Expenseplanner;
+package com.example.Expense.Planner;
 
 import android.app.DatePickerDialog;
 import android.icu.util.Calendar;
@@ -44,7 +44,7 @@ public class Expense extends AppCompatActivity implements View.OnClickListener {
     private String Date;
     private String Occasion;
     private String Amount;
-
+    Resources obj=new Resources();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,7 +104,7 @@ public class Expense extends AppCompatActivity implements View.OnClickListener {
                 new Response.Listener<String>(){
                     @Override
                     public void onResponse(String response) {
-                        if (response.equals("please fill all values")) {
+                        if (response.equals(obj.Valid)) {
                             Toast.makeText(Expense.this,"Please Enter all fields", Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(Expense.this,"Successfully Added !!!", Toast.LENGTH_LONG).show();

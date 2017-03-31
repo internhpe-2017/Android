@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+       <item name="response1" type="string">Sorry, Invalid Credentials</item>
+       <item name="response2" type="string">please fill all values</item>
+       <item name="response3" type="string">username or email already exist</item>
+       <item name="response4" type="string">Sorry, Invalid Credentials</item>
+</resources>

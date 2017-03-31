@@ -1,4 +1,4 @@
-package com.example.girivi.Expenseplanner;
+package com.example.Expense.Planner;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -48,6 +48,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
 
 		private Button Reg;
+		Resources obj=new Resources();
 
 		@Override
 		protected void onCreate(Bundle savedInstanceState) {
@@ -104,9 +105,9 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 				new Response.Listener<String>() {
 					@Override
 					public void onResponse(String response) {
-						if (response.equals("username or email already exist")) {
+						if (response.equals(obj.Exists)) {
 							Toast.makeText(Register.this, "username or email already exist", Toast.LENGTH_LONG).show();
-						} else if (response.equals("please fill all values")) {
+						} else if (response.equals(obj.Valid)) {
 							Toast.makeText(Register.this, "Please Enter all fields", Toast.LENGTH_LONG).show();
 						} else {
 							Toast.makeText(Register.this, "Successfully Registered !!!", Toast.LENGTH_LONG).show();

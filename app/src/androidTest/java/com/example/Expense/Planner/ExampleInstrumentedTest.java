@@ -1,4 +1,4 @@
-package com.example.girivi.Expenseplanner;
+package com.example.Expense.Planner;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
