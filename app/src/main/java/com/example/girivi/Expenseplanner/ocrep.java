@@ -1,4 +1,4 @@
-package com.example.girivi.vlogin;
+package com.example.girivi.Expenseplanner;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.girivi.vlogin;
+package com.example.girivi.Expenseplanner;
 
 import android.app.Activity;
 import android.view.LayoutInflater;

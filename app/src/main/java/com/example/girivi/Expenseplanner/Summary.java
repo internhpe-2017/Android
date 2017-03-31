@@ -1,4 +1,4 @@
-package com.example.girivi.vlogin;
+package com.example.girivi.Expenseplanner;
 
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +14,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-public class DetailedReport extends AppCompatActivity implements View.OnClickListener{
+public class Summary extends AppCompatActivity implements View.OnClickListener {
 
 
 
@@ -25,7 +25,7 @@ public class DetailedReport extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detailed_report);
+        setContentView(R.layout.activity_main);
 
         buttonGet = (Button) findViewById(R.id.buttonGet);
         buttonGet.setOnClickListener(this);
@@ -34,7 +34,7 @@ public class DetailedReport extends AppCompatActivity implements View.OnClickLis
 
     private void sendRequest(){
         final ProgressDialog loading = ProgressDialog.show(this,"Loading Data", "Please wait...",false,false);
-        StringRequest stringRequest = new StringRequest(AppConfig.JSON_URL,
+        StringRequest stringRequest = new StringRequest(AppConfig.JSON_URL1,
                 new Response.Listener<String>() {
                     @Override
 
@@ -47,7 +47,7 @@ public class DetailedReport extends AppCompatActivity implements View.OnClickLis
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(DetailedReport.this,error.getMessage(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(Summary.this,error.getMessage(),Toast.LENGTH_LONG).show();
                         loading.dismiss();
                     }
                 });
@@ -57,9 +57,9 @@ public class DetailedReport extends AppCompatActivity implements View.OnClickLis
     }
 
     private void showJSON(String json){
-        ParseJSON pj = new ParseJSON(json);
-        pj.parseJSON();
-        CustomList cl = new CustomList(this, ParseJSON.ids,ParseJSON.occasion,ParseJSON.particulars,ParseJSON.amount,ParseJSON.date,ParseJSON.to);
+        Parse pj = new Parse(json);
+        pj.parse();
+        SummaryList cl = new SummaryList(this,Parse.ids,Parse.occasion,Parse.particulars,Parse.amount,Parse.to);
         listView.setAdapter(cl);
     }
 
