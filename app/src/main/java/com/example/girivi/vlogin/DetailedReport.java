@@ -16,7 +16,7 @@ import com.android.volley.toolbox.Volley;
 
 public class DetailedReport extends AppCompatActivity implements View.OnClickListener{
 
-    public static final String JSON_URL = "http://www.triphpe.890m.com/getData.php";
+
 
     private Button buttonGet;
 
@@ -34,7 +34,7 @@ public class DetailedReport extends AppCompatActivity implements View.OnClickLis
 
     private void sendRequest(){
         final ProgressDialog loading = ProgressDialog.show(this,"Loading Data", "Please wait...",false,false);
-        StringRequest stringRequest = new StringRequest(JSON_URL,
+        StringRequest stringRequest = new StringRequest(AppConfig.JSON_URL,
                 new Response.Listener<String>() {
                     @Override
 

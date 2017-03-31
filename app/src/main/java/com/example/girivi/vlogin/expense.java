@@ -24,7 +24,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-public class expense extends AppCompatActivity implements View.OnClickListener {
+public class Expense extends AppCompatActivity implements View.OnClickListener {
     public static final String KEY_USERNAME = "Username";
     public static final String KEY_PARTICULAR = "Particular";
     public static final String KEY_DATE = "Date";
@@ -61,7 +61,7 @@ public class expense extends AppCompatActivity implements View.OnClickListener {
                 int mYear = c.get(Calendar.YEAR); // current year
                 int mMonth = c.get(Calendar.MONTH); // current month
                 int mDay = c.get(Calendar.DAY_OF_MONTH); // current day
-                datePickerDialog = new DatePickerDialog(expense.this,
+                datePickerDialog = new DatePickerDialog(Expense.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year,
@@ -100,21 +100,21 @@ public class expense extends AppCompatActivity implements View.OnClickListener {
         Date = date.getText().toString().trim().toLowerCase();
         Occasion = occasion.getText().toString().trim().toLowerCase();
         Amount = amount.getText().toString().trim().toLowerCase();
-        StringRequest stringRequest = new StringRequest(Request.Method.POST,Appconfig.ADD_URL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConfig.ADD_URL,
                 new Response.Listener<String>(){
                     @Override
                     public void onResponse(String response) {
                         if (response.equals("please fill all values")) {
-                            Toast.makeText(expense.this,"Please Enter all fields", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Expense.this,"Please Enter all fields", Toast.LENGTH_LONG).show();
                         } else {
-                            Toast.makeText(expense.this,"Successfully Added !!!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Expense.this,"Successfully Added !!!", Toast.LENGTH_LONG).show();
                         }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(expense.this, error.toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(Expense.this, error.toString(), Toast.LENGTH_LONG).show();
                     }
                 }) {
             @Override

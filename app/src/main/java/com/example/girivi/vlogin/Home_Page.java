@@ -14,7 +14,7 @@ public class Home_Page extends AppCompatActivity {
     }
 
     public void expenses(View view) {
-        Intent i = new Intent(this,expense.class);
+        Intent i = new Intent(this,Expense.class);
         startActivity(i);
     }
     public void settlement(View view) {

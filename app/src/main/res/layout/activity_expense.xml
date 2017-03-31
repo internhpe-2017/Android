@@ -11,7 +11,7 @@
         android:paddingTop="16dp"
         android:id="@+id/activity_expense"
         android:weightSum="1"
-        tools:context="com.example.girivi.vlogin.expense">
+        tools:context="com.example.girivi.vlogin.Expense">
 
         <EditText
             android:layout_width="match_parent"
@@ -45,6 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:hint="occasion"
             android:gravity="center"
             android:layout_margin="15dp"
             android:id="@+id/occasion" />

@@ -59,7 +59,7 @@ public class Reset extends AppCompatActivity implements View.OnClickListener {
         Pass = confirm.getText().toString().trim();
         Bundle extras = getIntent().getExtras();
         final String userEmail= extras.getString("KEY");
-        StringRequest stringRequest = new StringRequest(Request.Method.POST,Appconfig.Reset_URL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConfig.Reset_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

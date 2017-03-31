@@ -40,7 +40,7 @@ public class Forgot extends AppCompatActivity implements View.OnClickListener {
 
     private void forget() {
         email = forgot.getText().toString().trim().toLowerCase();
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Appconfig.Forgot_URL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConfig.Forgot_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

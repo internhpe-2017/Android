@@ -10,7 +10,6 @@ public class Profile extends AppCompatActivity {
     String here;
     TextView tv;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +33,7 @@ public class Profile extends AppCompatActivity {
     }
 
     public void expenses(View view) {
-        Intent i = new Intent(Profile.this,expense.class);
+        Intent i = new Intent(Profile.this,Expense.class);
         startActivity(i);
     }
     public void settlement(View view) {

@@ -4,11 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,10 +17,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -74,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         user = editTextUsername.getText().toString().trim();
         pass = editTextPassword.getText().toString().trim();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST,Appconfig.LOGIN_URL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConfig.LOGIN_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

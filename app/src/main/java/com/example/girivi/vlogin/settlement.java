@@ -1,8 +1,6 @@
 package com.example.girivi.vlogin;
 
 
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -69,7 +67,7 @@ public class settlement extends AppCompatActivity implements View.OnClickListene
         Amount = amount.getText().toString().trim().toLowerCase();
         Occasion = occasion.getText().toString().trim().toLowerCase();
         Owe = owe.getText().toString().trim().toLowerCase();
-        StringRequest stringRequest = new StringRequest(Request.Method.POST,Appconfig.SETTLEMENT_URL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConfig.SETTLEMENT_URL,
                 new Response.Listener<String>(){
                     @Override
                     public void onResponse(String response) {
