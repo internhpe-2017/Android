@@ -74,10 +74,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onResponse(String response) {
                         if(response.equals(obj.credentials)){
-                            Toast.makeText(MainActivity.this,"Sorry, Invalid Credentials",Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this,obj.credentials,Toast.LENGTH_LONG).show();
 
                         }else if (response.equals(obj.Valid)){
-                            Toast.makeText(MainActivity.this,"Please Enter all fields",Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this,obj.Valid,Toast.LENGTH_LONG).show();
                         }
 
                         else{

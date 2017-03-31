@@ -59,7 +59,7 @@ public class DetailedReport extends AppCompatActivity implements View.OnClickLis
     private void showJSON(String json){
         ParseJSON pj = new ParseJSON(json);
         pj.parseJSON();
-        CustomList cl = new CustomList(this, ParseJSON.ids,ParseJSON.occasion,ParseJSON.particulars,ParseJSON.amount,ParseJSON.date,ParseJSON.to);
+        CustomList cl = new CustomList(this,ParseJSON.ids,ParseJSON.occasion,ParseJSON.particulars,ParseJSON.amount,ParseJSON.date,ParseJSON.to);
         listView.setAdapter(cl);
     }
 

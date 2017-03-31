@@ -20,7 +20,8 @@ public class CustomList extends ArrayAdapter<String> {
     private String[] to;
     private Activity context;
 
-    public CustomList(Activity context, String[] ids, String[] occasion, String[] particulars, String[] amount, String[] date, String[] to) {
+    public CustomList(Activity context, String[] ids, String[] occasion, String[] particulars, String[] amount, String[] date, String[] to)
+    {
         super(context, R.layout.list_view_layout, ids);
         this.context = context;
         this.ids = ids;

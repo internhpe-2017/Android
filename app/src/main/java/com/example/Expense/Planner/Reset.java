@@ -27,6 +27,7 @@ public class Reset extends AppCompatActivity implements View.OnClickListener {
     private Button submit;
     private String Enter;
     private String Pass;
+    Resources obj=new Resources();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +42,7 @@ public class Reset extends AppCompatActivity implements View.OnClickListener {
         Enter = enter.getText().toString().trim();
         Pass = confirm.getText().toString().trim();
         if(Enter.equals("")||Pass.equals("")){
-            Toast.makeText(getApplicationContext(),"Please fill both fields",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),obj.Valid,Toast.LENGTH_LONG).show();
         }
         else{
             if(Enter.equals(Pass)){
@@ -50,7 +51,7 @@ public class Reset extends AppCompatActivity implements View.OnClickListener {
                 startActivity(i);
             }
             else{
-                Toast.makeText(getApplicationContext(),"password didn't match",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),obj.compare,Toast.LENGTH_LONG).show();
             }
         }
     }

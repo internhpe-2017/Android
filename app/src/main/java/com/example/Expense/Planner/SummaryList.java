@@ -16,7 +16,6 @@ public class SummaryList  extends ArrayAdapter<String> {
     private String[] occasion;
     private String[] particulars;
     private String[] amount;
-    //  private String[] date;
     private String[] to;
     private Activity context;
 
@@ -27,7 +26,6 @@ public class SummaryList  extends ArrayAdapter<String> {
         this.occasion = occasion;
         this.particulars = particulars;
         this.amount = amount;
-        //     this.date = date;
         this.to = to;
 
     }

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
        <item name="response1" type="string">Sorry, Invalid Credentials</item>
-       <item name="response2" type="string">please fill all values</item>
+       <item name="response2" type="string">please fill all Fields</item>
        <item name="response3" type="string">username or email already exist</item>
-       <item name="response4" type="string">Sorry, Invalid Credentials</item>
+       <item name="response4" type="string">Succesfully Added !!!</item>
+       <item name="response5" type="string">Succesfully Registered</item>
+       <item name="response6" type="string">Incorrect password</item>
+       <item name="response7" type="string">Password didnot match</item>
 </resources>

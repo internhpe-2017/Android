@@ -106,11 +106,11 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 					@Override
 					public void onResponse(String response) {
 						if (response.equals(obj.Exists)) {
-							Toast.makeText(Register.this, "username or email already exist", Toast.LENGTH_LONG).show();
+							Toast.makeText(Register.this,obj.Exists, Toast.LENGTH_LONG).show();
 						} else if (response.equals(obj.Valid)) {
-							Toast.makeText(Register.this, "Please Enter all fields", Toast.LENGTH_LONG).show();
+							Toast.makeText(Register.this,obj.Valid, Toast.LENGTH_LONG).show();
 						} else {
-							Toast.makeText(Register.this, "Successfully Registered !!!", Toast.LENGTH_LONG).show();
+							Toast.makeText(Register.this,obj.register, Toast.LENGTH_LONG).show();
 						}
 					}
 				},

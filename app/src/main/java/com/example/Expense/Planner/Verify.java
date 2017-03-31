@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class Verify extends AppCompatActivity {
     EditText ver;
     Button veri;
+    Resources obj=new Resources();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class Verify extends AppCompatActivity {
             startActivity(i);
         }
         else{
-            Toast.makeText(getApplicationContext(), "Incorrect OTP", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),obj.incorrect, Toast.LENGTH_LONG).show();
         }
     }
 }

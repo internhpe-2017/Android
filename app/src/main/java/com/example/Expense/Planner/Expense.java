@@ -105,9 +105,9 @@ public class Expense extends AppCompatActivity implements View.OnClickListener {
                     @Override
                     public void onResponse(String response) {
                         if (response.equals(obj.Valid)) {
-                            Toast.makeText(Expense.this,"Please Enter all fields", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Expense.this,obj.Valid, Toast.LENGTH_LONG).show();
                         } else {
-                            Toast.makeText(Expense.this,"Successfully Added !!!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Expense.this,obj.Sucess, Toast.LENGTH_LONG).show();
                         }
                     }
                 },

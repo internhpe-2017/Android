@@ -16,11 +16,11 @@ public class Parse {
     //  public static String[] date;
     public static String[] to;
 
-    public static final String JSON_ARRAY = "result";
-    public static final String KEY_ID = "id";
-    public static final String KEY_OCCASION = "occasion";
-    public static final String KEY_PARTICULARS = "particulars";
-    public static final String KEY_AMOUNT = "amount";
+    public static  String JSON_ARRAY = "result";
+    public static  String KEY_ID = "id";
+    public static  String KEY_OCCASION = "occasion";
+    public static  String KEY_PARTICULARS = "particulars";
+    public static  String KEY_AMOUNT = "amount";
     //   public static final String KEY_DATE = "date";
     public static final String KEY_TO = "to";
 

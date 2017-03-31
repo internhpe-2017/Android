@@ -72,9 +72,9 @@ public class Settlement extends AppCompatActivity implements View.OnClickListene
                     @Override
                     public void onResponse(String response) {
                         if (response.equals(obj.Valid)) {
-                            Toast.makeText(Settlement.this,"Please Enter all fields", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Settlement.this,obj.Valid, Toast.LENGTH_LONG).show();
                         } else {
-                            Toast.makeText(Settlement.this,"Successfully Added !!!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Settlement.this,obj.Sucess, Toast.LENGTH_LONG).show();
                         }
                     }
                 },
