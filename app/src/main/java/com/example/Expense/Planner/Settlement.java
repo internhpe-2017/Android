@@ -21,31 +21,27 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 public class Settlement extends AppCompatActivity implements View.OnClickListener {
-    public static  String KEY_NAME = "Username";
-    public static String KEY_AMOUNT = "Amount";
-    public static  String KEY_OCCASION = "Occasion";
-    public static  String KEY_OWE = "Owe";
 
-    private EditText name;
-    private EditText amount;
-    private EditText occasion;
+    public static  String KEY_OWE = "Owe";
+    public static  String KEY_OCCASION = "Occasion";
+    public static String KEY_AMOUNT = "Amount";
+
     private EditText owe;
+    private EditText occasion;
+    private EditText amount;
     private Button buttonadd;
 
-    private String Name;
-    private String Amount;
-    private String Occasion;
     private String Owe;
-
+    private String Occasion;
+    private String Amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settlement);
-        name = (EditText) findViewById(R.id.name);
-        amount = (EditText) findViewById(R.id.amount);
-        occasion = (EditText) findViewById(R.id.occasion);
         owe = (EditText) findViewById(R.id.owe);
+        occasion = (EditText) findViewById(R.id.occasion);
+        amount = (EditText) findViewById(R.id.amount);
         buttonadd = (Button) findViewById(R.id.buttonadd);
 
         buttonadd.setOnClickListener(this);
@@ -55,18 +51,17 @@ public class Settlement extends AppCompatActivity implements View.OnClickListene
     public void onClick(View v) {
         if(v == buttonadd){
             addsettlement();
-            name.setText("");
-            amount.setText("");
-            occasion.setText("");
             owe.setText("");
+            occasion.setText("");
+            amount.setText("");
         }
     }
 
     private void addsettlement() {
-        Name = name.getText().toString().trim().toLowerCase();
-        Amount = amount.getText().toString().trim().toLowerCase();
-        Occasion = occasion.getText().toString().trim().toLowerCase();
+
         Owe = owe.getText().toString().trim().toLowerCase();
+        Occasion = occasion.getText().toString().trim().toLowerCase();
+        Amount = amount.getText().toString().trim();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConfig.SETTLEMENT_URL,
                 new Response.Listener<String>(){
                     @Override
@@ -87,10 +82,9 @@ public class Settlement extends AppCompatActivity implements View.OnClickListene
             @Override
             protected Map<String,String> getParams() throws AuthFailureError {
                 Map<String,String> map = new HashMap<String,String>();
-                map.put(KEY_NAME, Name);
-                map.put(KEY_AMOUNT, Amount);
-                map.put(KEY_OCCASION, Occasion);
                 map.put(KEY_OWE, Owe);
+                map.put(KEY_OCCASION, Occasion);
+                map.put(KEY_AMOUNT, Amount);
                 return map;
             }
         };
