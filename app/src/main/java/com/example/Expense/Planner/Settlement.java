@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import java.lang.String;
 import java.util.HashMap;
@@ -22,18 +24,23 @@ import com.android.volley.toolbox.Volley;
 
 public class Settlement extends AppCompatActivity implements View.OnClickListener {
 
-    public static  String KEY_OWE = "Owe";
-    public static  String KEY_OCCASION = "Occasion";
+    public static String KEY_OWE = "Owe";
+    public static String KEY_OCCASION = "Occasion";
     public static String KEY_AMOUNT = "Amount";
+    public static String KEY_STATUSBUTTON = "Statusbutton";
 
     private EditText owe;
     private EditText occasion;
     private EditText amount;
+    private RadioGroup statusgroup;
+    private RadioButton statusbutton;
     private Button buttonadd;
 
     private String Owe;
     private String Occasion;
     private String Amount;
+    private String Statusbutton;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +49,7 @@ public class Settlement extends AppCompatActivity implements View.OnClickListene
         owe = (EditText) findViewById(R.id.owe);
         occasion = (EditText) findViewById(R.id.occasion);
         amount = (EditText) findViewById(R.id.amount);
+        statusgroup=(RadioGroup)findViewById(R.id.radioGroup);
         buttonadd = (Button) findViewById(R.id.buttonadd);
 
         buttonadd.setOnClickListener(this);
@@ -49,11 +57,14 @@ public class Settlement extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
+        int selectedId=statusgroup.getCheckedRadioButtonId();
+        statusbutton=(RadioButton)findViewById(selectedId);
         if(v == buttonadd){
             addsettlement();
             owe.setText("");
             occasion.setText("");
             amount.setText("");
+            statusbutton.setText("");
         }
     }
 
@@ -62,6 +73,7 @@ public class Settlement extends AppCompatActivity implements View.OnClickListene
         Owe = owe.getText().toString().trim().toLowerCase();
         Occasion = occasion.getText().toString().trim().toLowerCase();
         Amount = amount.getText().toString().trim();
+        Statusbutton = String.valueOf(statusbutton.getText());
         StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConfig.SETTLEMENT_URL,
                 new Response.Listener<String>(){
                     @Override
@@ -85,6 +97,7 @@ public class Settlement extends AppCompatActivity implements View.OnClickListene
                 map.put(KEY_OWE, Owe);
                 map.put(KEY_OCCASION, Occasion);
                 map.put(KEY_AMOUNT, Amount);
+                map.put(KEY_STATUSBUTTON, Statusbutton);
                 return map;
             }
         };
