@@ -1,4 +1,4 @@
-package com.example.Expense.Planner;
+package com.example.expense.planner;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -105,12 +105,12 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 				new Response.Listener<String>() {
 					@Override
 					public void onResponse(String response) {
-						if (response.equals(obj.Exists)) {
-							Toast.makeText(Register.this,obj.Exists, Toast.LENGTH_LONG).show();
-						} else if (response.equals(obj.Valid)) {
-							Toast.makeText(Register.this,obj.Valid, Toast.LENGTH_LONG).show();
+						if (response.equals(AppConfig.Exists)) {
+							Toast.makeText(Register.this,AppConfig.Exists, Toast.LENGTH_LONG).show();
+						} else if (response.equals(AppConfig.Valid)) {
+							Toast.makeText(Register.this,AppConfig.Valid, Toast.LENGTH_LONG).show();
 						} else {
-							Toast.makeText(Register.this,obj.register, Toast.LENGTH_LONG).show();
+							Toast.makeText(Register.this,AppConfig.register, Toast.LENGTH_LONG).show();
 						}
 					}
 				},

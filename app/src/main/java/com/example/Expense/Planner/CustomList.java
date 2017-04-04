@@ -1,4 +1,4 @@
-package com.example.Expense.Planner;
+package com.example.expense.planner;
 
 import android.app.Activity;
 import android.view.LayoutInflater;

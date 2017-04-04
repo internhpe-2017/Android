@@ -11,7 +11,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:weightSum="1"
-    tools:context="com.example.Expense.Planner.Settlement">
+    tools:context="com.example.expense.planner.Settlement">
 
     <EditText
         android:id="@+id/owe"

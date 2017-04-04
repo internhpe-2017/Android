@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Expense.Planner.Splash">
+    tools:context="com.example.expense.planner.Splash">
 
 
     <pl.droidsonroids.gif.GifImageView

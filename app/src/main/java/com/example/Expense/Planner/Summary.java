@@ -1,4 +1,4 @@
-package com.example.Expense.Planner;
+package com.example.expense.planner;
 
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;

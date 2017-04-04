@@ -1,4 +1,4 @@
-package com.example.Expense.Planner;
+package com.example.expense.planner;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -42,7 +42,7 @@ public class Reset extends AppCompatActivity implements View.OnClickListener {
         Enter = enter.getText().toString().trim();
         Pass = confirm.getText().toString().trim();
         if(Enter.equals("")||Pass.equals("")){
-            Toast.makeText(getApplicationContext(),obj.Valid,Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),AppConfig.Valid,Toast.LENGTH_LONG).show();
         }
         else{
             if(Enter.equals(Pass)){

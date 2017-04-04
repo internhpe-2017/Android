@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.Expense.Planner.Register">
+    tools:context="com.example.expense.planner.Register">
     <TextView
         android:text="Register"
         android:layout_marginTop="30dp"

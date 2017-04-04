@@ -1,4 +1,4 @@
-package com.example.Expense.Planner;
+package com.example.expense.planner;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

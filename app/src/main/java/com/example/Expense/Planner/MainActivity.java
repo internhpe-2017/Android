@@ -1,4 +1,4 @@
-package com.example.Expense.Planner;
+package com.example.expense.planner;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String user;
     private String pass;
-    Resources obj=new Resources();
+   // Resources obj=new Resources();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,11 +73,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        if(response.equals(obj.credentials)){
-                            Toast.makeText(MainActivity.this,obj.credentials,Toast.LENGTH_LONG).show();
+                        if(response.equals(AppConfig.Credentials)){
+                            Toast.makeText(MainActivity.this,AppConfig.Credentials,Toast.LENGTH_LONG).show();
 
-                        }else if (response.equals(obj.Valid)){
-                            Toast.makeText(MainActivity.this,obj.Valid,Toast.LENGTH_LONG).show();
+                        }else if (response.equals(AppConfig.Valid)){
+                            Toast.makeText(MainActivity.this,AppConfig.Valid,Toast.LENGTH_LONG).show();
                         }
 
                         else{

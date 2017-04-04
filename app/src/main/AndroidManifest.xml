@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.Expense.Planner">
+    package="com.example.expense.planner">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,21 +10,21 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.Expense.Planner.MainActivity" />
-        <activity android:name="com.example.Expense.Planner.Profile" />
-        <activity android:name="com.example.Expense.Planner.Session">
+        <activity android:name="com.example.expense.planner.MainActivity" />
+        <activity android:name="com.example.expense.planner.Profile" />
+        <activity android:name="com.example.expense.planner.Session">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.Expense.Planner.Splash" />
-        <activity android:name="com.example.Expense.Planner.Register" />
-        <activity android:name="com.example.Expense.Planner.Forgot" />
-        <activity android:name="com.example.Expense.Planner.Verify" />
-        <activity android:name="com.example.Expense.Planner.Reset" />
-        <activity android:name="com.example.Expense.Planner.DetailedReport"></activity>
+        <activity android:name="com.example.expense.planner.Splash" />
+        <activity android:name="com.example.expense.planner.Register" />
+        <activity android:name="com.example.expense.planner.Forgot" />
+        <activity android:name="com.example.expense.planner.Verify" />
+        <activity android:name="com.example.expense.planner.Reset" />
+        <activity android:name="com.example.expense.planner.DetailedReport"></activity>
     </application>
 
 </manifest>
